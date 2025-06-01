@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { AppShowcase } from "@/components/AppShowcase";
 import { Footer } from "@/components/Footer";
+import { BackgroundAnimations } from "@/components/BackgroundAnimations";
 
 const apps = [
   {
@@ -42,6 +43,9 @@ const apps = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+      {/* Background Animations */}
+      <BackgroundAnimations />
+
       {/* Global Background Elements */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_1200px_800px_at_50%_-100px,rgba(59,130,246,0.1),transparent)]"></div>
