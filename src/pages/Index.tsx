@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { AppShowcase } from "@/components/AppShowcase";
@@ -24,6 +23,70 @@ const liveApps = [
     url: "https://dataviz-analytics.example.com",
     gradient: "from-emerald-500 to-teal-600",
     icon: "📊"
+  },
+  {
+    id: "fitness-tracker",
+    title: "FitLife Coach",
+    description: "Personal fitness companion that adapts to your lifestyle with AI-powered workout recommendations, nutrition tracking, and progress visualization. Transform your health journey with intelligent insights.",
+    url: "https://fitlife-coach.example.com",
+    gradient: "from-orange-500 to-red-600",
+    icon: "💪"
+  },
+  {
+    id: "recipe-finder",
+    title: "ChefMate Kitchen",
+    description: "Discover culinary magic with smart recipe recommendations based on your ingredients, dietary preferences, and cooking skills. Features meal planning, grocery lists, and cooking timers.",
+    url: "https://chefmate-kitchen.example.com",
+    gradient: "from-yellow-500 to-orange-600",
+    icon: "👨‍🍳"
+  },
+  {
+    id: "budget-planner",
+    title: "WealthWise Finance",
+    description: "Take control of your financial future with intelligent budgeting, expense tracking, and investment insights. Secure, intuitive, and designed for financial peace of mind.",
+    url: "https://wealthwise-finance.example.com",
+    gradient: "from-green-600 to-emerald-600",
+    icon: "💰"
+  },
+  {
+    id: "learning-platform",
+    title: "SkillForge Academy",
+    description: "Interactive learning platform with adaptive coursework, skill assessments, and personalized learning paths. Master new skills with engaging content and community support.",
+    url: "https://skillforge-academy.example.com",
+    gradient: "from-indigo-600 to-purple-600",
+    icon: "🎓"
+  },
+  {
+    id: "weather-app",
+    title: "WeatherSense Pro",
+    description: "Advanced weather forecasting with hyperlocal predictions, severe weather alerts, and beautiful visualizations. Stay ahead of the weather with precision meteorology.",
+    url: "https://weathersense-pro.example.com",
+    gradient: "from-cyan-500 to-blue-600",
+    icon: "🌤️"
+  },
+  {
+    id: "music-streamer",
+    title: "SoundWave Studio",
+    description: "High-fidelity music streaming with AI-curated playlists, social listening features, and artist discovery tools. Experience music like never before with spatial audio support.",
+    url: "https://soundwave-studio.example.com",
+    gradient: "from-purple-600 to-pink-600",
+    icon: "🎵"
+  },
+  {
+    id: "travel-planner",
+    title: "WanderWise Travel",
+    description: "Intelligent travel planning with real-time booking, local recommendations, and itinerary optimization. Turn your travel dreams into perfectly planned adventures.",
+    url: "https://wanderwise-travel.example.com",
+    gradient: "from-teal-500 to-cyan-600",
+    icon: "✈️"
+  },
+  {
+    id: "productivity-suite",
+    title: "FocusFlow Workspace",
+    description: "All-in-one productivity suite combining note-taking, time tracking, and project management. Boost your productivity with seamless workflow integration and team collaboration.",
+    url: "https://focusflow-workspace.example.com",
+    gradient: "from-slate-600 to-gray-700",
+    icon: "⚡"
   }
 ];
 
