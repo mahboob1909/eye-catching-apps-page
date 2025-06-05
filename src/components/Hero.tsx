@@ -8,8 +8,8 @@ export function Hero() {
     setIsVisible(true);
   }, []);
 
-  const scrollToApps = () => {
-    const element = document.getElementById("apps");
+  const scrollToProjects = () => {
+    const element = document.getElementById("live-projects");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -60,11 +60,11 @@ export function Hero() {
             style={{ animationDelay: '0.6s' }}
           >
             <button 
-              onClick={scrollToApps}
+              onClick={scrollToProjects}
               className="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-10 py-5 rounded-2xl text-lg font-semibold hover-lift overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-3">
-                Explore Applications
+                Explore Projects
                 <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
