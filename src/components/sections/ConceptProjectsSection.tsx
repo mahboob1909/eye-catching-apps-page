@@ -1,10 +1,7 @@
-
 import { ConceptCard } from "@/components/ConceptCard";
 import { conceptProjects } from "@/data/projectsData";
-
 export function ConceptProjectsSection() {
-  return (
-    <section id="concept-projects" className="py-32 px-6 relative">
+  return <section id="concept-projects" className="py-32 px-6 relative">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-8 leading-tight">
@@ -17,14 +14,11 @@ export function ConceptProjectsSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {conceptProjects.map((project, index) => (
-            <div 
-              key={project.title}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+          {conceptProjects.map((project, index) => <div key={project.title} style={{
+          animationDelay: `${index * 0.1}s`
+        }}>
               <ConceptCard {...project} />
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Call to Action */}
@@ -40,13 +34,10 @@ export function ConceptProjectsSection() {
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-5 rounded-2xl font-semibold text-lg hover-lift shadow-xl hover:shadow-2xl">
                 Start a Project
               </button>
-              <button className="glass-effect text-gray-700 px-12 py-5 rounded-2xl font-semibold text-lg hover-lift border-2 border-gray-200 hover:border-gray-300">
-                View All Work
-              </button>
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
