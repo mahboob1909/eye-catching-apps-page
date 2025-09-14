@@ -15,25 +15,25 @@ export function Hero() {
   return <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 pb-20 px-6 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-400/30 to-pink-400/30 rounded-full blur-xl animate-float" style={{
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-secondary/30 to-accent/30 rounded-full blur-xl animate-float" style={{
         animationDelay: '2s'
       }}></div>
-        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-r from-indigo-400/30 to-blue-400/30 rounded-full blur-xl animate-float" style={{
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-to-r from-accent/30 to-primary/30 rounded-full blur-xl animate-float" style={{
         animationDelay: '4s'
       }}></div>
-        <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-lg animate-float" style={{
+        <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-r from-muted/20 to-accent/20 rounded-full blur-lg animate-float" style={{
         animationDelay: '1s'
       }}></div>
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           {/* Main Heading with Staggered Animation */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-gray-900 mb-8 leading-[0.9] tracking-tight">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-foreground mb-8 leading-[0.9] tracking-tight">
             <span className={`inline-block transition-all duration-700 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
               Crafting
             </span>
@@ -46,7 +46,7 @@ export function Hero() {
           </h1>
           
           {/* Subtitle with Enhanced Typography */}
-          <p className={`text-xl md:text-2xl lg:text-3xl text-gray-600 mb-12 max-w-5xl mx-auto leading-relaxed font-light transition-all duration-700 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`} style={{
+          <p className={`text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-5xl mx-auto leading-relaxed font-light transition-all duration-700 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`} style={{
           animationDelay: '0.4s'
         }}>
             Experience a curated collection of{" "}
@@ -58,7 +58,7 @@ export function Hero() {
           <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center transition-all duration-700 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`} style={{
           animationDelay: '0.6s'
         }}>
-            <button onClick={scrollToProjects} className="group relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-10 py-5 rounded-2xl text-lg font-semibold hover-lift overflow-hidden">
+            <button onClick={scrollToProjects} className="group relative bg-gradient-to-r from-primary via-secondary to-accent text-background px-10 py-5 rounded-2xl text-lg font-semibold hover-lift overflow-hidden">
               <span className="relative z-10 flex items-center gap-3">
                 Explore Projects
                 <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export function Hero() {
         <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} style={{
         animationDelay: '1s'
       }}>
-          <div className="flex flex-col items-center text-gray-400">
+          <div className="flex flex-col items-center text-muted-foreground">
             <span className="text-sm font-medium mb-3">Scroll to explore</span>
             
           </div>
