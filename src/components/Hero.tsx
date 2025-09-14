@@ -12,7 +12,7 @@ export function Hero() {
       });
     }
   };
-  return <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 pb-20 px-6 overflow-hidden">
+  return <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 pb-20 px-6 overflow-hidden bg-background">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-xl animate-float"></div>

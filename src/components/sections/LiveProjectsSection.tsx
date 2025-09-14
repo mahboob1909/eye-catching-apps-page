@@ -4,8 +4,8 @@ import { liveApps } from "@/data/projectsData";
 
 export function LiveProjectsSection() {
   return (
-    <section id="live-projects" className="py-32 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-transparent"></div>
+    <section id="live-projects" className="py-32 px-6 relative bg-background">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
