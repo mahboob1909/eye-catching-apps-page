@@ -64,13 +64,13 @@ export function ProjectCard({
               {icon}
             </div>
             <div>
-              <CardTitle className="text-xl font-bold text-gray-900">{title}</CardTitle>
+              <CardTitle className="text-xl font-bold text-foreground">{title}</CardTitle>
               <div className="flex items-center space-x-2 mt-1">
-                <span className={`px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${gradient} text-white`}>
+                <span className={`px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${gradient} text-background`}>
                   {status}
                 </span>
                 {expectedCompletion && (
-                  <span className="text-sm text-gray-500">ETA: {expectedCompletion}</span>
+                  <span className="text-sm text-muted-foreground">ETA: {expectedCompletion}</span>
                 )}
               </div>
             </div>
@@ -79,25 +79,25 @@ export function ProjectCard({
       </CardHeader>
 
       <CardContent className="relative space-y-4">
-        <p className="text-gray-600 leading-relaxed">{description}</p>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
         
         {/* Progress Bar */}
         <div className="space-y-2">
           <div className="flex justify-between items-center">
-            <span className="text-sm font-medium text-gray-700">Progress</span>
-            <span className="text-sm text-gray-500">{progress}%</span>
+            <span className="text-sm font-medium text-foreground">Progress</span>
+            <span className="text-sm text-muted-foreground">{progress}%</span>
           </div>
           <Progress value={progress} className="h-2" />
         </div>
 
         {/* Technologies */}
         <div className="space-y-2">
-          <span className="text-sm font-medium text-gray-700">Technologies</span>
+          <span className="text-sm font-medium text-foreground">Technologies</span>
           <div className="flex flex-wrap gap-2">
             {technologies.map((tech, index) => (
               <span 
                 key={tech}
-                className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium hover:bg-gray-200 transition-colors"
+                className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {tech}
@@ -107,7 +107,7 @@ export function ProjectCard({
         </div>
 
         {/* Action Button */}
-        <button className={`w-full mt-4 px-4 py-3 bg-gradient-to-r ${gradient} text-white rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
+        <button className={`w-full mt-4 px-4 py-3 bg-gradient-to-r ${gradient} text-background rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
           View Development Progress
         </button>
       </CardContent>

@@ -56,7 +56,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
             <span className="filter drop-shadow-lg">{app.icon}</span>
           </div>
           <div className="flex-1">
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 leading-tight mb-3">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-3">
               {app.title}
             </h3>
             <div className={`h-1.5 w-32 bg-gradient-to-r ${app.gradient} rounded-full`}></div>
@@ -64,7 +64,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
         </div>
         
         {/* Description */}
-        <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
+        <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light">
           {app.description}
         </p>
         
@@ -74,7 +74,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
             href={app.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r ${app.gradient} text-white rounded-2xl font-semibold text-lg hover-lift shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}
+            className={`group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r ${app.gradient} text-background rounded-2xl font-semibold text-lg hover-lift shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}
           >
             <span className="relative z-10 flex items-center gap-3">
               Launch Application
@@ -85,7 +85,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
             <div className="absolute inset-0 shimmer-effect animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </a>
           
-          <button className="group inline-flex items-center justify-center px-10 py-5 glass-effect text-gray-700 rounded-2xl font-semibold text-lg hover-lift border-2 border-gray-200 hover:border-gray-300 transition-all duration-300">
+          <button className="group inline-flex items-center justify-center px-10 py-5 glass-effect text-foreground rounded-2xl font-semibold text-lg hover-lift border-2 border-border hover:border-primary/50 transition-all duration-300">
             <span className="flex items-center gap-3">
               Learn More
               <svg className="w-6 h-6 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
           {['Modern Design', 'Responsive', 'Fast Performance'].map((tag, tagIndex) => (
             <span 
               key={tag}
-              className={`px-4 py-2 bg-gradient-to-r ${app.gradient} bg-opacity-10 text-gray-700 rounded-full text-sm font-medium border border-gray-200 hover:scale-105 transition-transform duration-200`}
+              className={`px-4 py-2 bg-gradient-to-r ${app.gradient} bg-opacity-10 text-foreground rounded-full text-sm font-medium border border-border hover:scale-105 transition-transform duration-200`}
               style={{ animationDelay: `${tagIndex * 0.1}s` }}
             >
               {tag}
@@ -131,11 +131,11 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
             </div>
             
             {/* Content Area with Mock Interface */}
-            <div className="p-8 text-white space-y-6">
+            <div className="p-8 text-background space-y-6">
               {/* Header Section */}
               <div className="space-y-3">
-                <div className="h-6 bg-white/40 rounded-lg w-2/3 shimmer-effect"></div>
-                <div className="h-4 bg-white/30 rounded-lg w-1/2"></div>
+                <div className="h-6 bg-background/40 rounded-lg w-2/3 shimmer-effect"></div>
+                <div className="h-4 bg-background/30 rounded-lg w-1/2"></div>
               </div>
               
               {/* Content Grid */}
@@ -143,7 +143,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
                 {[...Array(6)].map((_, i) => (
                   <div 
                     key={i}
-                    className="h-16 bg-white/20 rounded-xl transform hover:scale-105 transition-transform duration-200"
+                    className="h-16 bg-background/20 rounded-xl transform hover:scale-105 transition-transform duration-200"
                     style={{ animationDelay: `${i * 0.1}s` }}
                   ></div>
                 ))}
@@ -151,8 +151,8 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
               
               {/* Bottom Action */}
               <div className="flex justify-between items-center pt-4">
-                <div className="h-4 bg-white/30 rounded w-1/3"></div>
-                <div className="h-10 bg-white/40 rounded-full w-24"></div>
+                <div className="h-4 bg-background/30 rounded w-1/3"></div>
+                <div className="h-10 bg-background/40 rounded-full w-24"></div>
               </div>
             </div>
             
@@ -162,8 +162,8 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white/20 rounded-full"></div>
-            <div className="absolute top-1/2 -left-1 w-4 h-4 bg-white/20 rounded-full"></div>
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-background/20 rounded-full"></div>
+            <div className="absolute top-1/2 -left-1 w-4 h-4 bg-background/20 rounded-full"></div>
           </div>
           
           {/* Shadow Elements */}

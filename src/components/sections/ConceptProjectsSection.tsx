@@ -4,11 +4,11 @@ export function ConceptProjectsSection() {
   return <section id="concept-projects" className="py-32 px-6 relative">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-8 leading-tight">
+          <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-8 leading-tight">
             Proposed &
             <span className="block text-gradient">Concept Projects</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
             Innovative project concepts and ideas waiting to be brought to life with the right opportunities and resources.
           </p>
         </div>
@@ -23,15 +23,15 @@ export function ConceptProjectsSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-32">
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-12 border border-blue-100">
-            <h3 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
+          <div className="bg-gradient-to-r from-card to-muted rounded-3xl p-12 border border-border">
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
               Ready to Collaborate?
             </h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Whether you're interested in my deployed solutions, want to follow development progress, or have ideas for new concepts, let's connect.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-5 rounded-2xl font-semibold text-lg hover-lift shadow-xl hover:shadow-2xl">
+              <button className="bg-gradient-to-r from-primary to-secondary text-background px-12 py-5 rounded-2xl font-semibold text-lg hover-lift shadow-xl hover:shadow-2xl">
                 Start a Project
               </button>
               
