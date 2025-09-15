@@ -47,38 +47,38 @@ export function ConceptCard({
   }, []);
 
   const difficultyColors = {
-    Low: 'from-green-500 to-emerald-600',
-    Medium: 'from-yellow-500 to-orange-600',
-    High: 'from-red-500 to-pink-600'
+    Low: 'from-primary to-secondary',
+    Medium: 'from-secondary to-accent',
+    High: 'from-accent to-primary'
   };
 
   const priorityColors = {
-    Low: 'bg-gray-100 text-gray-700',
-    Medium: 'bg-blue-100 text-blue-700',
-    High: 'bg-purple-100 text-purple-700'
+    Low: 'bg-muted text-muted-foreground',
+    Medium: 'bg-secondary/20 text-secondary-foreground',
+    High: 'bg-primary/20 text-primary-foreground'
   };
 
   return (
     <Card 
       ref={ref}
-      className={`group relative overflow-hidden glass-effect border-2 border-gray-200 hover:border-gray-300 transition-all duration-500 hover-lift ${
+      className={`group relative overflow-hidden bg-card border-2 border-border hover:border-primary/30 transition-all duration-500 hover-lift ${
         isVisible ? 'animate-fade-up' : 'opacity-0 translate-y-8'
       }`}
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className={`w-full h-full bg-gradient-to-br ${gradient}`}></div>
+        <div className="w-full h-full bg-gradient-to-br from-primary to-secondary"></div>
       </div>
       
       <CardHeader className="relative">
         <div className="flex items-start justify-between">
           <div className="flex items-center space-x-4">
-            <div className={`w-12 h-12 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center text-xl shadow-lg`}>
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-xl shadow-lg text-background">
               {icon}
             </div>
             <div>
-              <CardTitle className="text-xl font-bold text-gray-900">{title}</CardTitle>
-              <p className="text-sm text-gray-500 mt-1">Target: {targetAudience}</p>
+              <CardTitle className="text-xl font-bold text-foreground">{title}</CardTitle>
+              <p className="text-sm text-muted-foreground mt-1">Target: {targetAudience}</p>
             </div>
           </div>
           <div className="flex flex-col space-y-2">
@@ -90,19 +90,19 @@ export function ConceptCard({
       </CardHeader>
 
       <CardContent className="relative space-y-4">
-        <p className="text-gray-600 leading-relaxed">{description}</p>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
         
         {/* Project Metrics */}
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1">
-            <span className="text-sm font-medium text-gray-700">Difficulty</span>
-            <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${difficultyColors[difficulty]} text-white`}>
+            <span className="text-sm font-medium text-foreground">Difficulty</span>
+            <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${difficultyColors[difficulty]} text-background`}>
               {difficulty}
             </div>
           </div>
           <div className="space-y-1">
-            <span className="text-sm font-medium text-gray-700">Est. Time</span>
-            <p className="text-sm text-gray-600">{timeEstimate}</p>
+            <span className="text-sm font-medium text-foreground">Est. Time</span>
+            <p className="text-sm text-muted-foreground">{timeEstimate}</p>
           </div>
         </div>
 
@@ -110,7 +110,7 @@ export function ConceptCard({
         <div className="space-y-2">
           <button 
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center justify-between w-full text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+            className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             Key Features
             <svg 
@@ -125,8 +125,8 @@ export function ConceptCard({
           {isExpanded && (
             <div className="space-y-1 animate-fade-in">
               {keyFeatures.map((feature, index) => (
-                <div key={feature} className="flex items-center space-x-2 text-sm text-gray-600">
-                  <div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
+                <div key={feature} className="flex items-center space-x-2 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                   <span>{feature}</span>
                 </div>
               ))}
@@ -136,10 +136,10 @@ export function ConceptCard({
 
         {/* Action Buttons */}
         <div className="flex space-x-3 pt-2">
-          <button className={`flex-1 px-4 py-2 bg-gradient-to-r ${gradient} text-white rounded-lg font-medium text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
+          <button className="flex-1 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-background rounded-lg font-medium text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300">
             Start Planning
           </button>
-          <button className="px-4 py-2 glass-effect text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors">
+          <button className="px-4 py-2 bg-muted text-muted-foreground rounded-lg font-medium text-sm hover:bg-accent hover:text-accent-foreground transition-colors">
             Learn More
           </button>
         </div>

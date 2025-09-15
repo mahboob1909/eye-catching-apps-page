@@ -52,15 +52,15 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
       <div className={`flex-1 space-y-8 ${isEven ? 'lg:pr-8' : 'lg:pl-8'}`}>
         {/* Header with Icon and Title */}
         <div className="flex items-start space-x-6">
-          <div className={`w-20 h-20 bg-gradient-to-br ${app.gradient} rounded-3xl flex items-center justify-center text-3xl shadow-2xl transform hover:scale-110 transition-all duration-300 hover:shadow-3xl`}>
-            <span className="filter drop-shadow-lg">{app.icon}</span>
-          </div>
-          <div className="flex-1">
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-3">
-              {app.title}
-            </h3>
-            <div className={`h-1.5 w-32 bg-gradient-to-r ${app.gradient} rounded-full`}></div>
-          </div>
+        <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-3xl flex items-center justify-center text-3xl shadow-2xl transform hover:scale-110 transition-all duration-300 hover:shadow-3xl">
+          <span className="filter drop-shadow-lg text-background">{app.icon}</span>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-3">
+            {app.title}
+          </h3>
+          <div className="h-1.5 w-32 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+        </div>
         </div>
         
         {/* Description */}
@@ -74,7 +74,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
             href={app.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r ${app.gradient} text-background rounded-2xl font-semibold text-lg hover-lift shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}
+            className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary to-secondary text-background rounded-2xl font-semibold text-lg hover-lift shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center gap-3">
               Launch Application
@@ -85,7 +85,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
             <div className="absolute inset-0 shimmer-effect animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </a>
           
-          <button className="group inline-flex items-center justify-center px-10 py-5 glass-effect text-foreground rounded-2xl font-semibold text-lg hover-lift border-2 border-border hover:border-primary/50 transition-all duration-300">
+          <button className="group inline-flex items-center justify-center px-10 py-5 bg-card text-foreground rounded-2xl font-semibold text-lg hover-lift border-2 border-border hover:border-primary/50 transition-all duration-300">
             <span className="flex items-center gap-3">
               Learn More
               <svg className="w-6 h-6 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
           {['Modern Design', 'Responsive', 'Fast Performance'].map((tag, tagIndex) => (
             <span 
               key={tag}
-              className={`px-4 py-2 bg-gradient-to-r ${app.gradient} bg-opacity-10 text-foreground rounded-full text-sm font-medium border border-border hover:scale-105 transition-transform duration-200`}
+              className="px-4 py-2 bg-primary/10 text-foreground rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 hover:scale-105 transition-all duration-200"
               style={{ animationDelay: `${tagIndex * 0.1}s` }}
             >
               {tag}
@@ -117,7 +117,7 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
           }`}
         >
           {/* Main Card with Enhanced Visual */}
-          <div className={`relative w-full h-96 bg-gradient-to-br ${app.gradient} rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500`}>
+          <div className="relative w-full h-96 bg-gradient-to-br from-primary to-secondary rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500">
             {/* Browser Chrome */}
             <div className="bg-black/20 h-12 flex items-center px-6 space-x-3">
               <div className="flex space-x-2">
@@ -125,8 +125,8 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
                 <div className="w-4 h-4 bg-yellow-400 rounded-full shadow-sm"></div>
                 <div className="w-4 h-4 bg-green-400 rounded-full shadow-sm"></div>
               </div>
-              <div className="flex-1 bg-white/20 rounded-lg px-4 py-1 mx-4">
-                <div className="h-2 bg-white/40 rounded w-3/4"></div>
+              <div className="flex-1 bg-background/20 rounded-lg px-4 py-1 mx-4">
+                <div className="h-2 bg-background/40 rounded w-3/4"></div>
               </div>
             </div>
             
@@ -167,8 +167,8 @@ export function AppShowcase({ app, index }: AppShowcaseProps) {
           </div>
           
           {/* Shadow Elements */}
-          <div className={`absolute -bottom-6 -right-6 w-full h-full bg-gradient-to-br ${app.gradient} rounded-3xl opacity-20 -z-10 transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}></div>
-          <div className={`absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-br ${app.gradient} rounded-3xl opacity-10 -z-20`}></div>
+          <div className={`absolute -bottom-6 -right-6 w-full h-full bg-gradient-to-br from-primary to-secondary rounded-3xl opacity-20 -z-10 transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}></div>
+          <div className="absolute -bottom-3 -right-3 w-full h-full bg-gradient-to-br from-primary to-secondary rounded-3xl opacity-10 -z-20"></div>
         </div>
       </div>
     </div>

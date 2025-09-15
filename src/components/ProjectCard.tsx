@@ -55,18 +55,18 @@ export function ProjectCard({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Background gradient overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary opacity-5 group-hover:opacity-10 transition-opacity duration-300"></div>
       
       <CardHeader className="relative">
         <div className="flex items-start justify-between">
           <div className="flex items-center space-x-4">
-            <div className={`w-12 h-12 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center text-xl transform group-hover:scale-110 transition-transform duration-300`}>
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center text-xl text-background transform group-hover:scale-110 transition-transform duration-300">
               {icon}
             </div>
             <div>
               <CardTitle className="text-xl font-bold text-foreground">{title}</CardTitle>
               <div className="flex items-center space-x-2 mt-1">
-                <span className={`px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${gradient} text-background`}>
+                <span className="px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-primary to-secondary text-background">
                   {status}
                 </span>
                 {expectedCompletion && (
@@ -107,7 +107,7 @@ export function ProjectCard({
         </div>
 
         {/* Action Button */}
-        <button className={`w-full mt-4 px-4 py-3 bg-gradient-to-r ${gradient} text-background rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
+        <button className="w-full mt-4 px-4 py-3 bg-gradient-to-r from-primary to-secondary text-background rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300">
           View Development Progress
         </button>
       </CardContent>
