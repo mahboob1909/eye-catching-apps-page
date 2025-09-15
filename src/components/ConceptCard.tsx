@@ -61,7 +61,7 @@ export function ConceptCard({
   return (
     <Card 
       ref={ref}
-      className={`group relative overflow-hidden bg-card border-2 border-border hover:border-primary/30 transition-all duration-500 hover-lift ${
+      className={`group relative overflow-hidden bg-card border-2 border-border hover:border-primary/30 transition-all duration-500 hover-lift h-full flex flex-col ${
         isVisible ? 'animate-fade-up' : 'opacity-0 translate-y-8'
       }`}
     >
@@ -89,7 +89,7 @@ export function ConceptCard({
         </div>
       </CardHeader>
 
-      <CardContent className="relative space-y-4">
+      <CardContent className="relative space-y-4 flex-1 flex flex-col">
         <p className="text-muted-foreground leading-relaxed">{description}</p>
         
         {/* Project Metrics */}
@@ -135,7 +135,7 @@ export function ConceptCard({
         </div>
 
         {/* Action Buttons */}
-        <div className="flex space-x-3 pt-2">
+        <div className="flex space-x-3 pt-2 mt-auto">
           <button className="flex-1 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-background rounded-lg font-medium text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300">
             Start Planning
           </button>

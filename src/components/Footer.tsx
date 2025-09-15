@@ -129,14 +129,14 @@ export function Footer() {
                 <span className="text-background font-bold text-lg font-display">W</span>
               </div>
               <p className="text-muted-foreground">
-                &copy; 2024 WebPortfolio. Crafted with passion and modern technologies.
+                &copy; 2025 WebPortfolio. Crafted with passion and modern technologies.
               </p>
             </div>
             
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-foreground transition-colors">Cookies</a>
+              <a href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</a>
+              <a href="/cookies" className="hover:text-foreground transition-colors">Cookies</a>
             </div>
           </div>
         </div>

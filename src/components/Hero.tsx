@@ -38,7 +38,7 @@ export function Hero() {
               Crafting
             </span>
             <br />
-            <span className={`inline-block text-gradient transition-all duration-700 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`} style={{
+            <span className={`inline-block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`} style={{
             animationDelay: '0.2s'
           }}>
               Digital Magic
