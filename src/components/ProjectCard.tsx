@@ -48,7 +48,7 @@ export function ProjectCard({
   return (
     <Card 
       ref={ref}
-      className={`group relative overflow-hidden transition-all duration-500 hover-lift ${
+      className={`group relative overflow-hidden transition-all duration-500 hover-lift bg-card h-full flex flex-col ${
         isVisible ? 'animate-fade-up' : 'opacity-0 translate-y-8'
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -78,7 +78,7 @@ export function ProjectCard({
         </div>
       </CardHeader>
 
-      <CardContent className="relative space-y-4">
+      <CardContent className="relative space-y-4 flex-1 flex flex-col">
         <p className="text-muted-foreground leading-relaxed">{description}</p>
         
         {/* Progress Bar */}

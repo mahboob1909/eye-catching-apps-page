@@ -33,12 +33,12 @@ export function Hero() {
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
           {/* Main Heading with Staggered Animation */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-foreground mb-8 leading-[0.9] tracking-tight">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-foreground mb-8 leading-tight tracking-tight">
             <span className={`inline-block transition-all duration-700 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
               Crafting
             </span>
             <br />
-            <span className={`inline-block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent transition-all duration-700 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`} style={{
+            <span className={`inline-block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent pb-1 transition-all duration-700 ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`} style={{
             animationDelay: '0.2s'
           }}>
               Digital Magic

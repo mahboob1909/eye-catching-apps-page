@@ -16,10 +16,11 @@ export function DevProjectsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {devProjects.map((project, index) => (
             <div 
               key={project.title}
+              className="h-full"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <ProjectCard {...project} />

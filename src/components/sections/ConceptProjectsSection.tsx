@@ -13,8 +13,8 @@ export function ConceptProjectsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {conceptProjects.map((project, index) => <div key={project.title} style={{
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          {conceptProjects.map((project, index) => <div key={project.title} className="h-full" style={{
           animationDelay: `${index * 0.1}s`
         }}>
               <ConceptCard {...project} />
