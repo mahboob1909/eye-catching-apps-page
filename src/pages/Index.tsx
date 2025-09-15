@@ -9,14 +9,14 @@ import { ConceptProjectsSection } from "@/components/sections/ConceptProjectsSec
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+    <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Background Animations */}
       <BackgroundAnimations />
 
-      {/* Global Background Elements */}
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_1200px_800px_at_50%_-100px,rgba(59,130,246,0.1),transparent)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_1000px_600px_at_100%_100%,rgba(139,92,246,0.1),transparent)]"></div>
+      {/* Global Background Elements (token-based, subtle) */}
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_1200px_800px_at_50%_-100px,hsl(var(--primary)/0.06),transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_1000px_600px_at_100%_100%,hsl(var(--accent)/0.05),transparent)]"></div>
       </div>
 
       <Header />
