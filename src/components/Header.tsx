@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import echoVerseDbLogo from "@/assets/echo-verse-db-logo.png";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,17 +33,20 @@ export function Header() {
     >
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo with Enhanced Animation */}
-          <div className="flex items-center space-x-3 group cursor-pointer">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
-                <span className="text-background font-bold text-xl font-display">W</span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-xl opacity-20 group-hover:animate-ping"></div>
+          {/* Logo and Company Info */}
+          <div className="flex items-center space-x-4 group cursor-pointer">
+            <img 
+              src={echoVerseDbLogo} 
+              alt="Echo Verse DB LLC Logo" 
+              className="w-12 h-12 md:w-14 md:h-14 transform group-hover:scale-110 transition-all duration-300 filter brightness-125 contrast-125"
+              style={{
+                filter: 'hue-rotate(20deg) brightness(1.2) contrast(1.3) saturate(1.1)'
+              }}
+            />
+            <div className="text-left">
+              <h2 className="text-xl md:text-2xl font-bold text-gradient">Echo Verse DB LLC</h2>
+              <p className="text-xs md:text-sm text-muted-foreground">Digital Innovation Studio</p>
             </div>
-            <span className="text-2xl font-display font-bold text-foreground group-hover:text-gradient transition-all duration-300">
-              WebPortfolio
-            </span>
           </div>
           
           {/* Desktop Navigation */}

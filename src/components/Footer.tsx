@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import echoVerseLogo from "@/assets/echo-verse-logo.png";
+import echoVerseDbLogo from "@/assets/echo-verse-db-logo.png";
 
 export function Footer() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -17,7 +17,7 @@ export function Footer() {
         {/* Logo and Company Info */}
         <div className="flex items-center justify-center mb-12">
           <img 
-            src={echoVerseLogo} 
+            src={echoVerseDbLogo} 
             alt="Echo Verse DB LLC Logo" 
             className="w-12 h-12 md:w-16 md:h-16 mr-4 filter brightness-125 contrast-125"
             style={{
@@ -143,7 +143,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center space-x-4">
               <img 
-                src={echoVerseLogo} 
+                src={echoVerseDbLogo} 
                 alt="Echo Verse DB LLC Logo" 
                 className="w-10 h-10 filter brightness-125 contrast-125"
                 style={{
