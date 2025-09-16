@@ -9,7 +9,7 @@ import { ConceptProjectsSection } from "@/components/sections/ConceptProjectsSec
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: '#050505' }}>
       {/* Background Animations */}
       <BackgroundAnimations />
 

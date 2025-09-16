@@ -2,21 +2,24 @@ import { ConceptCard } from "@/components/ConceptCard";
 import { conceptProjects } from "@/data/projectsData";
 export function ConceptProjectsSection() {
   return <section id="concept-projects" className="py-32 px-6 relative overflow-hidden" style={{ backgroundColor: '#050505' }}>
-      {/* Background Animations */}
-      <div className="absolute inset-0 opacity-25">
-        <div className="absolute top-32 left-16 w-36 h-36 bg-gradient-to-r from-primary/25 to-secondary/25 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-20 right-32 w-28 h-28 bg-gradient-to-r from-secondary/25 to-accent/25 rounded-full blur-xl animate-float" style={{ animationDelay: '2.5s' }}></div>
-        <div className="absolute bottom-48 left-1/3 w-24 h-24 bg-gradient-to-r from-accent/25 to-primary/25 rounded-full blur-xl animate-float" style={{ animationDelay: '4.5s' }}></div>
-        <div className="absolute top-2/3 right-1/4 w-20 h-20 bg-gradient-to-r from-muted/15 to-accent/15 rounded-full blur-lg animate-float" style={{ animationDelay: '1.2s' }}></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl animate-float" style={{ animationDelay: '3.8s' }}></div>
+      {/* Enhanced Background Animations */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-32 left-16 w-44 h-44 bg-gradient-to-r from-primary/35 to-secondary/35 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute top-20 right-32 w-36 h-36 bg-gradient-to-r from-secondary/35 to-accent/35 rounded-full blur-xl animate-float" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute bottom-48 left-1/3 w-32 h-32 bg-gradient-to-r from-accent/35 to-primary/35 rounded-full blur-xl animate-float" style={{ animationDelay: '4.5s' }}></div>
+        <div className="absolute top-2/3 right-1/4 w-28 h-28 bg-gradient-to-r from-muted/25 to-accent/25 rounded-full blur-lg animate-float" style={{ animationDelay: '1.2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-xl animate-float" style={{ animationDelay: '3.8s' }}></div>
+        <div className="absolute top-10 left-1/4 w-24 h-24 bg-gradient-to-r from-accent/30 to-primary/30 rounded-full blur-lg animate-float" style={{ animationDelay: '0.8s' }}></div>
+        <div className="absolute bottom-60 right-1/3 w-26 h-26 bg-gradient-to-r from-secondary/30 to-accent/30 rounded-full blur-lg animate-float" style={{ animationDelay: '5.2s' }}></div>
         
         {/* Enhanced Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.025)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.025)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary)/0.035)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary)/0.035)_1px,transparent_1px)] bg-[size:64px_64px] opacity-90"></div>
         
-        {/* Multiple Radial Gradients */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_20%_150px,hsl(var(--primary)/0.12),transparent)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_90%_400px,hsl(var(--accent)/0.1),transparent)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_400px_at_50%_80%,hsl(var(--secondary)/0.08),transparent)]"></div>
+        {/* Multiple Enhanced Radial Gradients */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_700px_at_20%_150px,hsl(var(--primary)/0.18),transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_90%_400px,hsl(var(--accent)/0.15),transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_80%,hsl(var(--secondary)/0.12),transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_450px_at_80%_10%,hsl(var(--primary)/0.1),transparent)]"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
