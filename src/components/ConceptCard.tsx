@@ -89,57 +89,59 @@ export function ConceptCard({
         </div>
       </CardHeader>
 
-      <CardContent className="relative space-y-4 flex-1 flex flex-col">
-        <p className="text-muted-foreground leading-relaxed">{description}</p>
-        
-        {/* Project Metrics */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-1">
-            <span className="text-sm font-medium text-foreground">Difficulty</span>
-            <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${difficultyColors[difficulty]} text-background`}>
-              {difficulty}
+      <CardContent className="relative flex-1 flex flex-col">
+        <div className="space-y-4 flex-1">
+          <p className="text-muted-foreground leading-relaxed">{description}</p>
+          
+          {/* Project Metrics */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-1">
+              <span className="text-sm font-medium text-foreground">Difficulty</span>
+              <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${difficultyColors[difficulty]} text-background`}>
+                {difficulty}
+              </div>
+            </div>
+            <div className="space-y-1">
+              <span className="text-sm font-medium text-foreground">Est. Time</span>
+              <p className="text-sm text-muted-foreground">{timeEstimate}</p>
             </div>
           </div>
-          <div className="space-y-1">
-            <span className="text-sm font-medium text-foreground">Est. Time</span>
-            <p className="text-sm text-muted-foreground">{timeEstimate}</p>
-          </div>
-        </div>
 
-        {/* Key Features - Expandable */}
-        <div className="space-y-2">
-          <button 
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
-          >
-            Key Features
-            <svg 
-              className={`w-4 h-4 transform transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
+          {/* Key Features - Expandable */}
+          <div className="space-y-2">
+            <button 
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="flex items-center justify-between w-full text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          {isExpanded && (
-            <div className="space-y-1 animate-fade-in">
-              {keyFeatures.map((feature, index) => (
-                <div key={feature} className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                  <span>{feature}</span>
-                </div>
-              ))}
-            </div>
-          )}
+              Key Features
+              <svg 
+                className={`w-4 h-4 transform transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {isExpanded && (
+              <div className="space-y-1 animate-fade-in">
+                {keyFeatures.map((feature, index) => (
+                  <div key={feature} className="flex items-center space-x-2 text-sm text-muted-foreground">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                    <span>{feature}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex space-x-3 pt-2 mt-auto">
-          <button className="flex-1 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-background rounded-lg font-medium text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+        {/* Action Buttons - Always at bottom */}
+        <div className="flex space-x-3 pt-4 mt-auto">
+          <button className="flex-1 px-4 py-3 bg-gradient-to-r from-primary to-secondary text-background rounded-lg font-medium text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300">
             Start Planning
           </button>
-          <button className="px-4 py-2 bg-muted text-muted-foreground rounded-lg font-medium text-sm hover:bg-accent hover:text-accent-foreground transition-colors">
+          <button className="px-4 py-3 bg-muted text-muted-foreground rounded-lg font-medium text-sm hover:bg-accent hover:text-accent-foreground transition-colors">
             Learn More
           </button>
         </div>
