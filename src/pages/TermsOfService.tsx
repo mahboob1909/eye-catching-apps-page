@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 export function TermsOfService() {
   useEffect(() => {
@@ -8,6 +10,14 @@ export function TermsOfService() {
   return (
     <div className="min-h-screen bg-background pt-20 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
+        <div className="mb-8">
+          <Link to="/">
+            <Button variant="outline" className="mb-6">
+              ← Back to Home
+            </Button>
+          </Link>
+        </div>
+        
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
             Terms of Service
@@ -28,7 +38,7 @@ export function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">Use License</h2>
             <p className="mb-4">
-              Permission is granted to temporarily download one copy of the materials on WebPortfolio's website for personal, 
+              Permission is granted to temporarily download one copy of the materials on Echo Verse DB LLC's website for personal, 
               non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
@@ -89,10 +99,10 @@ export function TermsOfService() {
             </p>
           </section>
 
-          <section>
+            <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">Contact Information</h2>
             <p>
-              If you have any questions about these Terms of Service, please contact us at legal@webportfolio.com
+              If you have any questions about these Terms of Service, please contact us at legal@echoverse.com
             </p>
           </section>
         </div>

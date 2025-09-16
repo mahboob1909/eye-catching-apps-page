@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import echoVerseLogo from "@/assets/echo-verse-logo.png";
+
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -32,6 +34,22 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
+          {/* Logo and Company Name */}
+          <div className={`flex items-center justify-center mb-8 transition-all duration-700 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+            <img 
+              src={echoVerseLogo} 
+              alt="Echo Verse DB LLC Logo" 
+              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 mr-4 filter brightness-125 contrast-125"
+              style={{
+                filter: 'hue-rotate(20deg) brightness(1.2) contrast(1.3) saturate(1.1)'
+              }}
+            />
+            <div className="text-left">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient">Echo Verse DB LLC</h2>
+              <p className="text-sm md:text-base text-muted-foreground">Digital Innovation Studio</p>
+            </div>
+          </div>
+          
           {/* Main Heading with Staggered Animation */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-foreground mb-8 leading-tight tracking-tight">
             <span className={`inline-block transition-all duration-700 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>

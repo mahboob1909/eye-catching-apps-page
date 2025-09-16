@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 export function Cookies() {
   useEffect(() => {
@@ -8,6 +10,14 @@ export function Cookies() {
   return (
     <div className="min-h-screen bg-background pt-20 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
+        <div className="mb-8">
+          <Link to="/">
+            <Button variant="outline" className="mb-6">
+              ← Back to Home
+            </Button>
+          </Link>
+        </div>
+        
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
             Cookie Policy
@@ -117,10 +127,10 @@ export function Cookies() {
             </p>
           </section>
 
-          <section>
+            <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">Contact Us</h2>
             <p>
-              If you have any questions about our use of cookies, please contact us at cookies@webportfolio.com
+              If you have any questions about our use of cookies, please contact us at cookies@echoverse.com
             </p>
           </section>
         </div>

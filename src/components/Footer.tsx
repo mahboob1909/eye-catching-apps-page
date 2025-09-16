@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import echoVerseLogo from "@/assets/echo-verse-logo.png";
 
 export function Footer() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
@@ -13,6 +14,22 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Logo and Company Info */}
+        <div className="flex items-center justify-center mb-12">
+          <img 
+            src={echoVerseLogo} 
+            alt="Echo Verse DB LLC Logo" 
+            className="w-12 h-12 md:w-16 md:h-16 mr-4 filter brightness-125 contrast-125"
+            style={{
+              filter: 'hue-rotate(20deg) brightness(1.2) contrast(1.3) saturate(1.1)'
+            }}
+          />
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold text-gradient">Echo Verse DB LLC</h3>
+            <p className="text-sm text-muted-foreground">Digital Innovation Studio</p>
+          </div>
+        </div>
+        
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content Section */}
           <div className="space-y-8">
@@ -125,11 +142,16 @@ export function Footer() {
         <div className="border-t border-border mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                <span className="text-background font-bold text-lg font-display">W</span>
-              </div>
+              <img 
+                src={echoVerseLogo} 
+                alt="Echo Verse DB LLC Logo" 
+                className="w-10 h-10 filter brightness-125 contrast-125"
+                style={{
+                  filter: 'hue-rotate(20deg) brightness(1.2) contrast(1.3) saturate(1.1)'
+                }}
+              />
               <p className="text-muted-foreground">
-                &copy; 2025 WebPortfolio. Crafted with passion and modern technologies.
+                &copy; 2025 Echo Verse DB LLC. Crafted with passion and modern technologies.
               </p>
             </div>
             
