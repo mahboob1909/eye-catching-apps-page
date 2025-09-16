@@ -6,7 +6,7 @@ export function Footer() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
 
   return (
-    <footer id="contact" className="relative bg-gradient-to-br from-card via-muted to-background text-foreground py-20 px-6 overflow-hidden">
+    <footer id="contact" className="relative text-foreground py-20 px-6 overflow-hidden" style={{ backgroundColor: '#050505' }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,hsl(var(--primary)/0.15),transparent)]"></div>
