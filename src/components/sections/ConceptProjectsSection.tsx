@@ -1,7 +1,7 @@
 import { ConceptCard } from "@/components/ConceptCard";
 import { conceptProjects } from "@/data/projectsData";
 export function ConceptProjectsSection() {
-  return <section id="concept-projects" className="py-32 px-6 relative">
+  return <section id="concept-projects" className="py-32 px-6 relative" style={{ backgroundColor: '#050505' }}>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-8 leading-tight">

@@ -4,7 +4,7 @@ import { devProjects } from "@/data/projectsData";
 
 export function DevProjectsSection() {
   return (
-    <section id="dev-projects" className="py-32 px-6 relative bg-gradient-to-b from-background to-card/30">
+    <section id="dev-projects" className="py-32 px-6 relative" style={{ backgroundColor: '#050505' }}>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-8 leading-tight">
